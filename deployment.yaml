@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web 
+spec:
+  selector:
+    matchLabels:
+      app: web
+      department: IT
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: web
+        department: IT
+    spec:
+      containers:
+      - name: web 
+        image: "eu.gcr.io/devops-test-245321/web-same-pod" 
+        env:
+        - name: "PORT"
+          value: "5000"
+      - name: db
+        image: "eu.gcr.io/devops-test-245321/createdb" 
