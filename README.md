@@ -51,7 +51,7 @@ after few minutes your cluster will be ready
   1. run unit tests (for example check python syntax: `python -m py_compile app_a.py`)
   2. build docker image
   3. push the new docker to GCR 
-  4. change the **deployment.yaml** file fo use the newly pushed docker image
+  4. change the **deployment.yaml** file to use the newly pushed docker image
   5. deploy the service with the new docker image into a staging environment
   6. run full tests, in our case:
  ```
